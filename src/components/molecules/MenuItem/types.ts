@@ -1,9 +1,8 @@
-import { ReactNode } from 'react';
+import { IconType } from "react-icons";
 
 export type MenuItemProps = {
-  children: ReactNode;
   active?: boolean;
-  icon: ReactNode;
+  icon: IconType;
   url: string;
   exact?: boolean;
 };

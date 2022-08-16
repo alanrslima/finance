@@ -1,18 +1,11 @@
-import { ReactNode } from "react";
-import {
-  IoBuild,
-  IoBusiness,
-  IoList,
-  IoListCircle,
-  IoListOutline,
-} from "react-icons/io5";
-import { TiFlowChildren } from "react-icons/ti";
+import { IconType } from "react-icons";
+import { FaHome, FaWallet, FaRandom, FaTags } from "react-icons/fa";
 
 type MenuItem = {
   id: number;
   label: string;
   url: string;
-  icon: ReactNode;
+  icon: IconType;
 };
 
 type MenuConfig = {
@@ -21,8 +14,19 @@ type MenuConfig = {
 
 export const menuConfig: MenuConfig = {
   items: [
-    { id: 1, label: "Profile", url: "/profile", icon: IoBusiness },
-    { id: 2, label: "Dashboard", url: "/dashboard", icon: TiFlowChildren },
-    { id: 3, label: "Wallets", url: "/wallets", icon: TiFlowChildren },
+    { id: 1, label: "Home", url: "/", icon: FaHome },
+    { id: 2, label: "Wallet", url: "/accounts", icon: FaWallet },
+    {
+      id: 3,
+      label: "Transactions",
+      url: "/transactions",
+      icon: FaRandom,
+    },
+    {
+      id: 3,
+      label: "Categiories",
+      url: "/categiories",
+      icon: FaTags,
+    },
   ],
 };

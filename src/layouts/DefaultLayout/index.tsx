@@ -1,7 +1,9 @@
 // import { Head } r } from 'components/Sidebar';
+import { Head } from "components/atoms/Head";
 import { Sidebar } from "components/organisms/Sidebar";
+import { Topbar } from "components/organisms/Topbar";
 import { ReactElement } from "react";
-import { Container, Content, InnerContent } from "./styles";
+import { Container, Content, InnerContent, Wrapper } from "./styles";
 import { DefaultLayoutProps } from "./types";
 
 export function DefaultLayout({
@@ -10,13 +12,17 @@ export function DefaultLayout({
 }: DefaultLayoutProps): ReactElement {
   return (
     <>
-      {/* <Head title={title} /> */}
-      <Container>
-        <Sidebar />
-        <Content as="main">
-          <InnerContent as="section">{children}</InnerContent>
-        </Content>
-      </Container>
+      <Head title={title} />
+      <Wrapper>
+        <Container>
+          <Sidebar />
+
+          <Content as="main">
+            <Topbar />
+            {/* <InnerContent as="section">{children}</InnerContent> */}
+          </Content>
+        </Container>
+      </Wrapper>
     </>
   );
 }

@@ -15,14 +15,12 @@ export function Menu(): ReactElement {
     <Container as="nav" {...arias}>
       <MenuItemsWrapper role="list">
         {items.map(({ id, label, url, icon }) => (
-          <MenuItem key={id} url={url} icon={icon} active>
-            {label}
-          </MenuItem>
+          <MenuItem key={id} url={url} icon={icon} active />
         ))}
         <LogoutWrapper>
-          <MenuItem url="/signout" icon={IoLogOutOutline}>
+          {/* <MenuItem url="/signout" icon={IoLogOutOutline}>
             Logout
-          </MenuItem>
+          </MenuItem> */}
         </LogoutWrapper>
       </MenuItemsWrapper>
     </Container>

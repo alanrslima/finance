@@ -1,4 +1,4 @@
-import { Menu } from "components/Menu";
+import { Menu } from "components/organisms/Menu";
 import { ReactElement } from "react";
 import NextLink from "next/link";
 import { Container, LogoWrapper } from "./styles";

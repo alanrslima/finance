@@ -8,8 +8,9 @@ export const semanticColors = {
   inputBorderColor: "$gray600",
   inputBgColor: "$white",
 
-  bgColor: "#D2D8E3",
-  button: "#4972EA",
+  bg: "#FBFBFC",
+  primary: "#3760ED",
+  secundary: "#D7E6FC",
 
   signalGreen: "#D2FDAF",
   signalRed: "#FF617B",
