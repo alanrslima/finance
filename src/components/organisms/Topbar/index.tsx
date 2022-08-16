@@ -10,10 +10,9 @@ import {
   WrapperText,
 } from "./styles";
 import { Button } from "components/atoms/Button";
+import { SelectInput } from "components/atoms/SelectInput";
 
 export function Topbar(): ReactElement {
-  const arias = {};
-
   return (
     <Container>
       <WrapperResume>
@@ -30,7 +29,7 @@ export function Topbar(): ReactElement {
 
       <WrapperActions>
         <Button />
-        <Button />
+        <SelectInput />
       </WrapperActions>
     </Container>
   );

@@ -2,9 +2,15 @@ import { Flex, Text, Avatar as CAvatar } from "@chakra-ui/react";
 import { styled } from "styles/stitches.config";
 
 export const Container = styled(Flex, {
-  flexDirection: "row",
+  flexDirection: "column",
   align: "center",
   justifyContent: "space-between",
+  pb: "$8",
+  borderBottom: "1px solid $blackA100",
+
+  "@md": {
+    flexDirection: "row",
+  },
 });
 
 export const Avatar = styled(CAvatar, {});

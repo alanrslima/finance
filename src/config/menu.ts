@@ -23,7 +23,7 @@ export const menuConfig: MenuConfig = {
       icon: FaRandom,
     },
     {
-      id: 3,
+      id: 4,
       label: "Categiories",
       url: "/categiories",
       icon: FaTags,

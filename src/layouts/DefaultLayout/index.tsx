@@ -19,6 +19,7 @@ export function DefaultLayout({
 
           <Content as="main">
             <Topbar />
+            {children}
             {/* <InnerContent as="section">{children}</InnerContent> */}
           </Content>
         </Container>
