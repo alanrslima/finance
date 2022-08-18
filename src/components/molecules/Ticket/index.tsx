@@ -1,16 +1,7 @@
-import { Button } from "components/atoms/Button";
 import { ReactElement } from "react";
-import { Container, Header, Title } from "./styles";
-import { CardProps } from "./types";
+// import { Container, Header, Title } from "./styles";
+// import { CardProps } from "./types";
 
-export function Ticket({ children }: CardProps): ReactElement {
-  return (
-    <Container>
-      <Header>
-        <Title>Titulo</Title>
-        <Button />
-      </Header>
-      {children}
-    </Container>
-  );
+export function Ticket(): ReactElement {
+  return <div></div>;
 }
