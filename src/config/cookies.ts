@@ -1,7 +1,7 @@
-import { COOKIES_DOMAIN } from 'config/constants';
+import { COOKIES_DOMAIN } from "config/constants";
 
 type CookieConfigProps = {
-  sameSite: 'lax';
+  sameSite: "lax";
   path: string;
   safe: boolean;
   domain: string;
@@ -9,9 +9,9 @@ type CookieConfigProps = {
 };
 
 export const cookiesConfig: CookieConfigProps = {
-  sameSite: 'lax',
-  path: '/',
-  domain: COOKIES_DOMAIN,
+  sameSite: "lax",
+  path: "/",
+  domain: COOKIES_DOMAIN!,
   safe: true,
   httpOnly: true,
 };

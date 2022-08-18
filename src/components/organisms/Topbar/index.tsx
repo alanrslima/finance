@@ -28,7 +28,7 @@ export function Topbar(): ReactElement {
       </WrapperResume>
 
       <WrapperActions>
-        <Button />
+        <Button text="Nova transação" />
         <SelectInput />
       </WrapperActions>
     </Container>

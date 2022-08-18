@@ -1,12 +1,12 @@
 import axios, { AxiosInstance } from "axios";
-import { getCookies } from "cookies-next";
+// import { getCookies } from "cookies-next";
 import { addAuthInterceptor } from "services/interceptors/authInterceptor";
 import { addCSRFInterceptor } from "services/interceptors/csrfInterceptor";
 import { addLocaleInterceptor } from "services/interceptors/localeInterceptor";
 import { addTokenInterceptor } from "services/interceptors/tokenInterceptor";
 
 export function createApi(ctx = undefined): AxiosInstance {
-  const cookies = getCookies(ctx);
+  // const cookies = getCookies(ctx);
 
   return axios.create({
     baseURL: process.env.NEXT_PUBLIC_API_URL,
@@ -38,7 +38,7 @@ export function setupApiClient(ctx = undefined): AxiosInstance {
 
 export const api = setupApiClient();
 
-export const getApiInstance = (ctx) => {
+export const getApiInstance = (ctx: any) => {
   if (ctx) return setupApiClient(ctx);
   return api;
 };
