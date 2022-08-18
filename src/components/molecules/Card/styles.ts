@@ -11,6 +11,7 @@ export const Container = styled(Flex, {
 
 export const Header = styled(Flex, {
   justify: "space-between",
+  align: "center",
 });
 
 export const Title = styled(Text, {

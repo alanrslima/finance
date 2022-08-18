@@ -24,16 +24,15 @@ export function Chart(): ReactElement {
           </linearGradient>
         </defs>
       </svg>
-      <VictoryChart animate={{ duration: 1000 }}>
+      <VictoryChart>
         <VictoryArea
           interpolation="natural"
+          animate={{
+            duration: 2000,
+            onLoad: { duration: 1000 },
+          }}
           style={{
-            data: {
-              fill: "url(#myGradient)",
-            },
-            labels: {
-              fontSize: 12,
-            },
+            data: { fill: "url(#myGradient)" },
           }}
           data={sampleData}
         />

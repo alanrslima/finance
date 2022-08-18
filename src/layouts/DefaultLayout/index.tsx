@@ -3,7 +3,7 @@ import { Head } from "components/atoms/Head";
 import { Sidebar } from "components/organisms/Sidebar";
 import { Topbar } from "components/organisms/Topbar";
 import { ReactElement } from "react";
-import { Container, Content, InnerContent, Wrapper } from "./styles";
+import { Container, Content } from "./styles";
 import { DefaultLayoutProps } from "./types";
 
 export function DefaultLayout({
@@ -13,17 +13,14 @@ export function DefaultLayout({
   return (
     <>
       <Head title={title} />
-      <Wrapper>
-        <Container>
-          <Sidebar />
+      <Container>
+        <Sidebar />
 
-          <Content as="main">
-            <Topbar />
-            {children}
-            {/* <InnerContent as="section">{children}</InnerContent> */}
-          </Content>
-        </Container>
-      </Wrapper>
+        <Content as="main">
+          <Topbar />
+          {children}
+        </Content>
+      </Container>
     </>
   );
 }

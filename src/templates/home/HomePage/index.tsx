@@ -1,4 +1,6 @@
 import { Drawer } from "components/atoms/Drawer";
+import { Spacer } from "components/atoms/Spacer";
+import { Card } from "components/molecules/Card";
 import { Chart } from "components/organisms/Chart";
 import { LastTransactions } from "components/organisms/LastTransactions";
 import { StatResume } from "components/organisms/StatResume";
@@ -16,13 +18,22 @@ export function HomePage(): ReactElement {
 
   return (
     <DefaultLayout>
-      <Drawer />
+      {/* <Drawer /> */}
       <StatResume />
       <Layout>
-        <WrapperLeft colSpan={2}>
-          <Chart />
+        <WrapperLeft>
+          <Spacer h="$8" />
+          <Card>
+            <Chart />
+          </Card>
+          <Spacer h="$8" />
+          <Card>
+            <Chart />
+          </Card>
         </WrapperLeft>
+
         <WrapperRight>
+          <Spacer h="$8" />
           <LastTransactions />
         </WrapperRight>
       </Layout>

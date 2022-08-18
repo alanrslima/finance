@@ -2,7 +2,11 @@ import { Flex, Link } from "@chakra-ui/react";
 import { styled } from "styles/stitches.config";
 
 export const Container = styled(Flex, {
-  display: "flex",
+  display: "none",
+  "@sm": {
+    display: "flex",
+  },
+
   direction: "column",
   w: "100px",
   h: "100%",

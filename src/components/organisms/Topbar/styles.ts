@@ -30,7 +30,10 @@ export const WrapperText = styled(Flex, {
 
 export const Title = styled(Text, {
   fontWeight: "$bold",
-  fontSize: "$5",
+  fontSize: "$4",
+  "@sm": {
+    fontSize: "$5",
+  },
 });
 
 export const Name = styled("span", {
@@ -39,4 +42,8 @@ export const Name = styled("span", {
 
 export const Description = styled("span", {
   color: "$blackA400",
+  fontSize: "$2",
+  "@sm": {
+    fontSize: "$3",
+  },
 });
