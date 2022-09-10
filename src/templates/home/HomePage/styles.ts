@@ -1,26 +1,33 @@
-import { Flex } from "@chakra-ui/react";
-import { styled } from "styles/stitches.config";
+import { Flex } from '@chakra-ui/react';
+import { styled } from 'styles/stitches.config';
 
 export const Layout = styled(Flex, {
-  flexDirection: "column",
-  "@md": {
-    flexDirection: "row",
+  flexDirection: 'column',
+  '@md': {
+    flexDirection: 'row',
   },
 });
 
 export const WrapperLeft = styled(Flex, {
-  flexDirection: "column",
+  flexDirection: 'column',
   flex: 1,
-  "@sm": {
+  '@sm': {
     flex: 0.6,
   },
 });
 
 export const WrapperRight = styled(Flex, {
-  flexDirection: "column",
+  flexDirection: 'column',
   flex: 1,
-  "@md": {
+  '@md': {
     flex: 0.4,
-    pl: "$8",
+    pl: '$8',
+  },
+});
+
+export const Row = styled(Flex, {
+  flexDirection: 'column',
+  '@sm': {
+    flexDirection: 'row',
   },
 });

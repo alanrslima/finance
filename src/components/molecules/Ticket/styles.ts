@@ -1,22 +1,24 @@
 import { Flex, Text } from '@chakra-ui/react';
 import { styled } from 'styles/stitches.config';
 
-export const Container = styled(Flex, {
+export const Container = styled('button', {
+  p: '$8',
   flexDirection: 'column',
+  bg: 'rgba(108,99,255,0.12)',
+  br: '$4',
+  cursor: 'pointer',
+  mb: '$6',
   w: '100%',
-  py: '$6',
-});
-
-export const WrapperTitle = styled(Flex, {
-  flexDirection: 'row',
-  align: 'center',
-  mb: '$4',
+  '@sm': {
+    w: 'auto',
+    mr: '$6',
+  },
 });
 
 export const Title = styled(Text, {
   color: '$gray600',
   fontWeight: '$medium',
-  mr: '$3',
+  mb: '$3',
 });
 
 export const Value = styled(Text, {

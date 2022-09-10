@@ -1,11 +1,11 @@
-import { Card } from "components/molecules/Card";
-import { SimpleItem } from "components/molecules/SimpleItem";
-import { ReactElement } from "react";
-import { Container, List, Item } from "./styles";
+import { Card } from 'components/molecules/Card';
+import { SimpleItem } from 'components/molecules/SimpleItem';
+import { ReactElement } from 'react';
+import { Container, List, Item } from './styles';
 
 export function LastTransactions(): ReactElement {
   return (
-    <Card>
+    <Card title="Últimas transações">
       <List>
         <SimpleItem />
         <SimpleItem />

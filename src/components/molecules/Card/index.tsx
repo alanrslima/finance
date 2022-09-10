@@ -1,13 +1,13 @@
 // import { Button } from "components/atoms/Button";
-import { ReactElement } from "react";
-import { Container, Header, Title } from "./styles";
-import { CardProps } from "./types";
+import { ReactElement } from 'react';
+import { Container, Header, Title } from './styles';
+import { CardProps } from './types';
 
-export function Card({ children }: CardProps): ReactElement {
+export function Card({ children, title }: CardProps): ReactElement {
   return (
     <Container>
       <Header>
-        <Title>Titulo</Title>
+        <Title>{title}</Title>
         {/* <Button /> */}
       </Header>
       {children}
