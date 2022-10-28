@@ -1,0 +1,16 @@
+export const items = [
+  { value: '#F2D7D5', label: '#F2D7D5' },
+  { value: '#F5B7B1', label: '#F5B7B1' },
+  { value: '#D7BDE2', label: '#D7BDE2' },
+  { value: '#D2B4DE', label: '#D2B4DE' },
+  { value: '#A9CCE3', label: '#A9CCE3' },
+  { value: '#AED6F1', label: '#AED6F1' },
+  { value: '#A3E4D7', label: '#A3E4D7' },
+  { value: '#A2D9CE', label: '#A2D9CE' },
+  { value: '#A9DFBF', label: '#A9DFBF' },
+  { value: '#F5CBA7', label: '#F5CBA7' },
+  { value: '#EDBB99', label: '#EDBB99' },
+  { value: '#E5E7E9', label: '#E5E7E9' },
+  { value: '#CCD1D1', label: '#CCD1D1' },
+  { value: '#AEB6BF', label: '#AEB6BF' },
+];

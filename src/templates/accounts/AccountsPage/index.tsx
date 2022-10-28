@@ -5,12 +5,16 @@ import { Ticket } from 'components/molecules/Ticket';
 import { DefaultLayout } from 'layouts/DefaultLayout';
 import { ReactElement, useRef } from 'react';
 import { Row } from './styles';
+import { AccountsForm } from '../AccountsForm';
 
 export function AccountsPage(): ReactElement {
   const drawerRef = useRef<DrawerElement>();
 
   const onClickAccount = () => {
-    drawerRef.current.open();
+    console.log(drawerRef.current);
+    if (drawerRef.current) {
+      drawerRef.current?.open();
+    }
   };
 
   return (
@@ -27,7 +31,9 @@ export function AccountsPage(): ReactElement {
           <Ticket />
         </Row>
       </Card>
-      <Drawer ref={drawerRef} />
+      <Drawer ref={drawerRef}>
+        <AccountsForm />
+      </Drawer>
     </DefaultLayout>
   );
 }

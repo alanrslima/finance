@@ -13,6 +13,11 @@ export const Container = styled('button', {
     w: 'auto',
     mr: '$6',
   },
+  transition: '.3s all',
+
+  _hover: {
+    transform: 'scale(1.05)',
+  },
 });
 
 export const Title = styled(Text, {

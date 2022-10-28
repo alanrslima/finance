@@ -1,16 +1,16 @@
-import "styles/reset.css";
+import 'styles/reset.css';
 
-import type { AppProps } from "next/app";
-import { ChakraProvider } from "@chakra-ui/react";
-import { globalStyles } from "styles/globalCss";
+import type { AppProps } from 'next/app';
+import { globalStyles } from 'styles/globalCss';
+import { RootProvider } from 'providers/RootProvider';
 
 function MyApp({ Component, pageProps }: AppProps) {
   globalStyles();
 
   return (
-    <ChakraProvider>
+    <RootProvider>
       <Component {...pageProps} />
-    </ChakraProvider>
+    </RootProvider>
   );
 }
 
