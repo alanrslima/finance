@@ -1,10 +1,10 @@
-import { Children, cloneElement, ReactElement, useEffect, useMemo, useState } from 'react';
+import { Children, cloneElement, ReactElement, useEffect, useState } from 'react';
 import { Label } from '../Label';
 import { getHash } from 'lib/hash';
 import { FormControlProps } from './types';
-import { Container, Error, LabelWrapper } from './styles';
+import { ActionButton, Container, Error, LabelWrapper, WrapperLabel } from './styles';
 
-export function FormControl({ children, label, name, error }: FormControlProps): ReactElement {
+export function FormControl({ children, label, name, error, actionButton }: FormControlProps): ReactElement {
   const [labelId, setLabelId] = useState<string>();
   const [inputId, setInputId] = useState<string>();
 
@@ -16,18 +16,26 @@ export function FormControl({ children, label, name, error }: FormControlProps):
   return (
     <Container>
       <>
-        {label && typeof label === 'string' && (
-          <LabelWrapper>
-            <Label id={String(labelId)} htmlFor={inputId} isInvalid={Boolean(error)}>
-              {label}
-            </Label>
-          </LabelWrapper>
-        )}
-        {label && typeof label !== 'string' && (
-          <LabelWrapper>
-            {cloneElement(label, { htmlFor: inputId, id: String(labelId), isInvalid: Boolean(error) })}
-          </LabelWrapper>
-        )}
+        <WrapperLabel>
+          {label && typeof label === 'string' && (
+            <LabelWrapper>
+              <Label id={String(labelId)} htmlFor={inputId} isInvalid={Boolean(error)}>
+                {label}
+              </Label>
+            </LabelWrapper>
+          )}
+          {label && typeof label !== 'string' && (
+            <LabelWrapper>
+              {cloneElement(label, { htmlFor: inputId, id: String(labelId), isInvalid: Boolean(error) })}
+            </LabelWrapper>
+          )}
+
+          {actionButton && (
+            <ActionButton type="button" onClick={actionButton.onClick}>
+              {actionButton.label}
+            </ActionButton>
+          )}
+        </WrapperLabel>
 
         {Children.map(children, (child: JSX.Element) => {
           return cloneElement(child, { isInvalid: Boolean(error), id: inputId });

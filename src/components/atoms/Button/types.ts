@@ -1,7 +1,9 @@
-import { ButtonProps as CButtonProps } from "@chakra-ui/react";
+import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { IconName } from '../Icon/types';
 
-export type ButtonProps = CButtonProps & {
-  bgColor?: string;
-  text: string;
-  tintColor?: string;
+export type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
+  children: ReactNode;
+  leftIcon?: IconName;
+  schema?: 'primary' | 'secondary';
+  isLoading?: boolean;
 };

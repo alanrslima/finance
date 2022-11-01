@@ -6,4 +6,5 @@ export type FormControlProps = {
   name?: string;
   label?: string | JSX.Element;
   error?: string | FieldError | Merge<FieldError, FieldErrorsImpl<any>>;
+  actionButton?: { label: string; onClick: () => void };
 };

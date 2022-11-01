@@ -6,10 +6,11 @@ export type TextInputProps = InputHTMLAttributes<HTMLInputElement> & {
   name: string;
   controlled?: boolean;
   list?: string;
-  type?: 'email' | 'text' | 'number';
+  type?: 'email' | 'text' | 'number' | 'password';
   placeholder?: string;
   disabled?: boolean;
   isInvalid?: boolean;
+  secureTextEntry?: boolean;
 };
 
 export type InputProps = Omit<TextInputProps, 'controlled'> & {

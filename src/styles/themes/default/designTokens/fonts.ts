@@ -1,3 +1,4 @@
 export const fonts = {
-  poppins: "Poppins, apple-system, sans-serif",
+  heading: 'Montserrat, Helvetica,  apple-system, sans-serif',
+  body: 'Montserrat, Helvetica,  apple-system, sans-serif',
 };

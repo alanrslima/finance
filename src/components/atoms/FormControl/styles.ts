@@ -4,13 +4,23 @@ import { styled } from 'styles/stitches.config';
 export const Container = styled(Flex, {
   direction: 'column',
   w: '100%',
-  // mb: '$6',
+});
+
+export const WrapperLabel = styled(Flex, {
+  justifyContent: 'space-between',
+  mb: '$3',
+  align: 'center',
+});
+
+export const ActionButton = styled('button', {
+  display: 'flex',
+  fontSize: '$2',
+  fontWeight: 'bold',
+  color: '$primary',
 });
 
 export const LabelWrapper = styled(Flex, {
   position: 'relative',
-  w: '100%',
-  mb: '$3',
 });
 
 export const Error = styled('p', {

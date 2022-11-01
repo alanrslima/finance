@@ -1,23 +1,27 @@
 import { styled } from 'styles/stitches.config';
 
+export const RightIcon = styled('button', {
+  px: '$4',
+});
+
 export const Container = styled('div', {
   position: 'relative',
   display: 'flex',
   flex: '1',
-  bg: '$white',
+  bg: '$background',
 
-  border: '1px solid $gray500',
+  border: '1px solid $onSurfaceDisabled',
   br: '$1',
 
   fontSize: '$3',
   fontWeight: '600',
-  color: '$gray900',
+  color: '$onBackgroundPrimary',
 
   transition: 'all 300ms ease-in-out',
 
   _focus: {
     borderColor: '$primary',
-    boxShadow: '0 0 5px rgba(55, 96, 237, 0.4)',
+    boxShadow: '$colors$boxShadow',
   },
 
   input: {
@@ -30,6 +34,10 @@ export const Container = styled('div', {
 
     minH: '40px',
     px: '$4',
+
+    _placeholder: {
+      color: '$placeholder',
+    },
   },
 
   variants: {
