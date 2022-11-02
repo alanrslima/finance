@@ -1,20 +1,20 @@
-import axios, { AxiosInstance } from "axios";
+import axios, { AxiosInstance } from 'axios';
 // import { getCookies } from "cookies-next";
-import { addAuthInterceptor } from "services/interceptors/authInterceptor";
-import { addCSRFInterceptor } from "services/interceptors/csrfInterceptor";
-import { addLocaleInterceptor } from "services/interceptors/localeInterceptor";
-import { addTokenInterceptor } from "services/interceptors/tokenInterceptor";
+import { addAuthInterceptor } from 'services/interceptors/authInterceptor';
+import { addCSRFInterceptor } from 'services/interceptors/csrfInterceptor';
+import { addLocaleInterceptor } from 'services/interceptors/localeInterceptor';
+import { addTokenInterceptor } from 'services/interceptors/tokenInterceptor';
 
 export function createApi(ctx = undefined): AxiosInstance {
   // const cookies = getCookies(ctx);
 
   return axios.create({
     baseURL: process.env.NEXT_PUBLIC_API_URL,
-    withCredentials: true,
+    // withCredentials: true,
     headers: {
-      "Content-Type": "application/json",
-      accept: "application/json",
-      "Access-Control-Allow-Origin": "*",
+      'Content-Type': 'application/json',
+      // accept: 'application/json',
+      // "Access-Control-Allow-Origin": "*",
     },
   });
 }
@@ -29,9 +29,9 @@ export function setupApiClient(ctx = undefined): AxiosInstance {
   const apiInstance = createApi(ctx);
 
   addTokenInterceptor(apiInstance, ctx);
-  addLocaleInterceptor(apiInstance);
+  // addLocaleInterceptor(apiInstance);
   addCSRFInterceptor(apiInstance, fetchCSRF);
-  addAuthInterceptor(apiInstance, ctx);
+  // addAuthInterceptor(apiInstance, ctx);
 
   return apiInstance;
 }

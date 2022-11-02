@@ -12,15 +12,15 @@ export const Container = styled('button', {
   justify: 'center',
   transition: '$1',
 
-  _hover: {
-    opacity: 0.5,
-  },
-
   variants: {
     schema: {
       primary: {
         background: '$primary',
         color: 'white',
+
+        _hover: {
+          background: '$primaryDark',
+        },
       },
       secondary: {
         bg: '$background',

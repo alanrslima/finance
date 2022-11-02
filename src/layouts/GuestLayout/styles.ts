@@ -18,7 +18,7 @@ export const Container = styled(Flex, {
 export const Overlay = styled(Flex, {
   h: '100%',
   w: '100%',
-  backgroundImage: 'linear-gradient(90deg, #FAFAFC 48.3%, rgba(250, 250, 252, 0.59) 100%)',
+  backgroundImage: 'linear-gradient(90deg, #FAFAFC 48.3%, rgba(250, 250, 252, 0.20) 100%)',
 });
 
 export const WrapperCard = styled(Flex, {

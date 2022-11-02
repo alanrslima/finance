@@ -23,6 +23,7 @@ export const semanticColors = {
   onSurfaceDisabled: 'rgba(0,0,0,0.1)',
 
   primary: '#3081EE',
+  primaryDark: '#286AC1',
   onPrimaryPrimary: 'rgba(255,255,255,1)',
   onPrimarySecondary: 'rgba(255,255,255,0.5)',
   onPrimaryDisabled: 'rgba(255,255,255,0.3)',

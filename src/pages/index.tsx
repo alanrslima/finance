@@ -1,8 +1,13 @@
-import type { NextPage } from "next";
-import { HomePage } from "templates/home/HomePage";
+import { withSSRAuth } from 'hoc/withSSRAuth';
+import { ReactElement } from 'react';
+import { HomePage } from 'templates/home/HomePage';
 
-const Home: NextPage = () => {
+export default function Home(): ReactElement {
   return <HomePage />;
-};
+}
 
-export default Home;
+export const getServerSideProps = withSSRAuth(async () => {
+  return {
+    props: {},
+  };
+});

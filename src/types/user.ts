@@ -1,1 +1,7 @@
-export type UserProps = { id: number; name: string };
+export type UserProps = {
+  id: number;
+  email: string;
+  firstName: string;
+  lastName: string;
+  password?: string;
+};

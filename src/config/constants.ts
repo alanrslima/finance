@@ -3,7 +3,7 @@ export const COOKIES_DOMAIN = process.env.NEXT_PUBLIC_COOKIES_DOMAIN;
 export const COOKIE_BASE_NAME = process.env.NEXT_PUBLIC_COOKIE_BASE_NAME || '_m';
 
 // AUTHENTICATION
-export const AUTH_SECRET = process.env.NEXTAUTH_SECRET;
+export const AUTH_SECRET = process.env.NEXT_PUBLIC_SECRET;
 export const AUTH_TOKEN_NAME = `${COOKIE_BASE_NAME}.token`;
 export const AUTH_REFRESH_TOKEN_NAME = `${COOKIE_BASE_NAME}.refreshToken`;
 export const AUTH_CALLBACK_URL = `${COOKIE_BASE_NAME}.callback-url`;
